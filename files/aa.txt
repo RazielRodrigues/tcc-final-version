@@ -1,0 +1,51 @@
+LINKS:
+	- https://downloads.voltdb.com/technologies/server/voltdb-developer-10.1.1.tar.gz
+	- https://docs.microsoft.com/en-us/windows/wsl/install-win10
+INSTALAR LINUX WINDOWS:
+	1 - Abrir powershell como admin
+		- dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+	2 - Habilitar VM
+		- dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+	3 - Atualizar para WSL2
+		- https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+	4 -  WSL 2 como default
+		- wsl --set-default-version 2
+	5 - Instalar Ubuntu 20.04 LTS
+		- https://www.microsoft.com/store/apps/9n6svws3rx71
+	6 - Atualizar sistema
+		- sudo apt-get upgrade
+
+"TITULO"
+FIGURA XXXXX - NOME XXXX
+- ARIAL OU TIMES
+- NEGRITO
+- CENTRALIZADO
+- FONTE 12
+- COR PRETA
+
+"LEGENDA"
+FONTE: XXX (ANO PUBLICAÇÃO XXXX)
+- ARIAL OU TIMES
+- FONTE 10
+
+INICIAR BANCO E INSTALAR BANCO DE DADOS:
+wget https://downloads.voltdb.com/technologies/server/voltdb-developer-10.1.1.tar.gz
+tar -xvzf voltdb-developer-10.1.1.tar.gz
+export PATH="$PATH:$HOME/voltdb-developer-10.1.1/bin"
+voltdb --version
+mkdir benchmark
+cd benchmark
+voltdb init
+voltdb start -B para inicializar em background
+
+RODANDO BENCHMARK:
+cd ~/voltdb-developer-10.1.1/examples/simple/
+sqlcmd < ddl.sql
+chmod 755 ./run_client.sh
+./run_client.sh
+
+PASSAR REVISOR
+IGOR LER
+AMANDA LER
+MELLI LER
+PROFESSORA LER E AGENDAR REUNIÃO

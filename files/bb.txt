@@ -1,0 +1,58 @@
+Para instalar esta versão, primeiro atualize o índice de pacotes.
+
+	sudo apt update
+
+A seguir, verifique se o Java já está instalado:
+
+	java -version
+
+Se o Java não estiver instalado no momento, você verá a seguinte saída:
+
+Output
+Command 'java' not found, but can be installed with:
+
+sudo apt install default-jre              # version 2:1.11-72, or
+sudo apt install openjdk-11-jre-headless  # version 11.0.7+10-3ubuntu1
+sudo apt install openjdk-13-jre-headless  # version 13.0.3+3-1ubuntu2
+sudo apt install openjdk-14-jre-headless  # version 14.0.1+7-1ubuntu1
+sudo apt install openjdk-8-jre-headless   # version 8u252-b09-1ubuntu1
+
+Execute o seguinte comando para instalar o Java Runtime Environment (JRE) padrão, que instalará o JRE do OpenJDK 11:
+	
+	sudo apt install default-jre
+
+Verifique a instalação com:
+
+	java -version
+
+Você verá o seguinte resultado:
+
+Output
+openjdk version "11.0.7" 2020-04-14
+OpenJDK Runtime Environment (build 11.0.7+10-post-Ubuntu-3ubuntu1)
+OpenJDK 64-Bit Server VM (build 11.0.7+10-post-Ubuntu-3ubuntu1, mixed mode, sharing)
+
+	sudo apt install default-jdk
+
+Verifique se o JDK está instalado verificando a versão do javac, o compilador do Java:
+
+	javac -version
+
+Você verá o seguinte resultado:
+
+Output
+javac 11.0.7
+
+Gerenciando o Java
+
+	sudo update-alternatives --config java
+
+Copie o caminho da sua instalação preferida. Em seguida, abra o /etc/environment usando o nano ou seu editor de texto favorito:
+	
+	sudo nano /etc/environment
+
+No final deste arquivo, adicione a seguinte linha, certificando-se de substituir o caminho destacado pelo seu próprio caminho copiado, mas não inclua a parte bin/ do caminho:
+
+	JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
+
+	echo $JAVA_HOME

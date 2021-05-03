@@ -1,0 +1,7 @@
+export PATH="$PATH:$HOME/voltdb-developer-10.1.1/bin"
+cd benchmark
+voltdb start -B
+
+cd ~/voltdb-developer-10.1.1/examples/simple/
+sqlcmd < ddl.sql
+ ./run_client.sh localhost 500000

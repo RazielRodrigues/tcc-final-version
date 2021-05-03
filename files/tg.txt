@@ -1,0 +1,18 @@
+Observações do Anderson:
+ 
+
+
+	
+Manter o mesmo padrão de SO, Java (e não php) e rodar 5 ou 10 vezes e faz a média e desvio padrão (cross validation).
+	Justificar paragrafo
+	Legenda e figura na mesma página
+	Conclusão - Trabalhos Futuros
+
+[12/10/20 8:48 PM] PATRICIA BELLIN RIBEIRO
+    Observações Alexandre Galvani:
+​[12/10/20 8:49 PM] PATRICIA BELLIN RIBEIRO
+    
+
+	
+Incluir tabela comparativa
+
